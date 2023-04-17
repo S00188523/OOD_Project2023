@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Personal_Project
 {
@@ -29,6 +30,18 @@ namespace Personal_Project
             MessageBox.Show($"An error occurred while populating the standings list: {ex.Message}");
         }
     }
-}
+
+        private void lbxTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Get the selected team from the ListBox control
+            var selectedTeam = lbxTable.SelectedItem as Team;
+
+            if (selectedTeam != null)
+            {
+                Window1 window1 = new Window1(selectedTeam);
+                window1.ShowDialog();
+            }
+        }
+    }
 
 }

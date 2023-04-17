@@ -5,20 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personal_Project"
         mc:Ignorable="d"
-        Title="Premier League Table 2022/2023" Height="450" Width="800" 
-        >
+        Title="Premier League Table 2022/2023" Height="450" Width="800">
     <Window.DataContext>
         <local:MainViewModel />
     </Window.DataContext>
 
     <Window.Resources>
         <DataTemplate x:Key="teamTemplate">
-           
+
+            
             <StackPanel Orientation="Horizontal">
 
-                <Image Source="{Binding SquadLogo}" Height="25"/>
-
                 <TextBlock Text="{Binding Position}" Margin="10"/>
+                <Image Source="{Binding SquadLogo}" Height="25"/>
                 <TextBlock Text="{Binding Name}" FontWeight="Bold" Margin="10"/>
                 <TextBlock Text="{Binding Played}" Margin="10"/>
                 <TextBlock Text="{Binding Winned}" Margin="10"/>
@@ -26,15 +25,14 @@
                 <TextBlock Text="{Binding Loosed}" Margin="10"/>
                 <TextBlock Text="{Binding Points}" Margin="10"/>
 
-
             </StackPanel>
         </DataTemplate>
-
-
     </Window.Resources>
 
+    
+    
     <Grid>
-        <ListBox x:Name="lbxTable" ItemTemplate="{StaticResource teamTemplate}" ItemsSource="{Binding Teams}"/>
+        <ListBox x:Name="lbxTable" ItemTemplate="{StaticResource teamTemplate}" ItemsSource="{Binding Teams}" SelectionChanged="lbxTable_SelectionChanged"/>
 
     </Grid>
 </Window>
