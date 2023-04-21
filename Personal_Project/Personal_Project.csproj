@@ -115,7 +115,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="MainViewModel.cs" />
-    <Compile Include="Standings.cs" />
     <Compile Include="Team.cs" />
     <Compile Include="TeamInfoWindow.cs" />
     <Compile Include="Window1.xaml.cs">

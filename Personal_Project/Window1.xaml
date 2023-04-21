@@ -5,10 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personal_Project"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800"
+        Title="Team Info" Height="450" Width="800"
         Loaded="Window_Loaded">
     <Grid >
-        <TextBlock x:Name="tblkTeamName" HorizontalAlignment="Left" Margin="310,112,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-
+        <TextBlock x:Name="tblkTeamName" HorizontalAlignment="Left" Margin="310,112,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top"/>
     </Grid>
 </Window>

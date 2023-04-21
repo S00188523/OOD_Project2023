@@ -8,36 +8,18 @@ namespace Personal_Project
 {
     public class Team
     {
-        public string Position { get; set; }
+        public int Rank { get; set; }
         public string Name { get; set; }
-        public string Played { get; set; }
-        public string Winned { get; set; }
-        public string Tie { get; set; }
-        public string Loosed { get; set; }
-        public string Points { get; set; }
+        public string GamesPlayed { get; set; }
+        public int Wins { get; set; }
+        public int Ties { get; set; }
+        public int Losses { get; set; }
+        public int Points { get; set; }
+        public string Logo { get; set; }
+        public int GoalsFor { get; set; }
+        public int GoalsAgainst { get; set; }
+        public int GoalDifference { get; set; }
 
-
-        public string SquadLogo { get; set; }
-        public List<Standings> Standings { get; set; }
-
-        public Team()
-        {
-            Standings = new List<Standings>();
-        }
-
-        public void CalculateStats()
-        {
-         
-           
-            
-            //int nPlayed = Standings.Sum(s => Convert.ToInt32(s.Played));
-            //Won = Standings.Sum(s => s.Won);
-            //Drawn = Standings.Sum(s => s.Drawn);
-            //Lost = Standings.Sum(s => s.Lost);
-            //Points = Standings.Sum(s => s.Points);
-        }
     }
-
-
 
 }

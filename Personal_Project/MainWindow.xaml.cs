@@ -39,7 +39,7 @@ namespace Personal_Project
             if (selectedTeam != null)
             {
                 Window1 window1 = new Window1(selectedTeam);
-                window1.ShowDialog();
+                window1.ShowDialog();               
             }
         }
     }

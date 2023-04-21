@@ -33,6 +33,7 @@ namespace Personal_Project
             if(team != null)
             {
                 tblkTeamName.Text = team.Name;
+
             }
         }
     }
