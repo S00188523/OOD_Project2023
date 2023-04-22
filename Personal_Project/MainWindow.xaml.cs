@@ -13,8 +13,7 @@ namespace Personal_Project
     public MainWindow()
     {
         InitializeComponent();
-        DataContext = new MainViewModel();
-        PopulateStandingsListBox();
+
     }
 
     private async void PopulateStandingsListBox()
@@ -34,13 +33,19 @@ namespace Personal_Project
         private void lbxTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // Get the selected team from the ListBox control
-            var selectedTeam = lbxTable.SelectedItem as Team;
+            var selectedTeam = lbxTable.SelectedItem as Team2;
 
             if (selectedTeam != null)
             {
                 Window1 window1 = new Window1(selectedTeam);
                 window1.ShowDialog();               
             }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            DataContext = new MainViewModel();
+            PopulateStandingsListBox();
         }
     }
 

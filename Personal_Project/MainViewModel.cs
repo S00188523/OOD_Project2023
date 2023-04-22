@@ -8,14 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
 using Microsoft.VisualStudio.Services.Organization.Client;
+using Microsoft.VisualStudio.Services.Common;
 
 namespace Personal_Project
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        private ObservableCollection<Team> _teams;
+        private ObservableCollection<Team2> _teams;
 
-        public ObservableCollection<Team> Teams
+        public ObservableCollection<Team2> Teams
         {
             get { return _teams; }
             set
@@ -46,10 +47,32 @@ namespace Personal_Project
                 response.EnsureSuccessStatusCode();
                 var json = await response.Content.ReadAsStringAsync();
             
-
                 // Deserialize the JSON into a list of Team objects
-                var teams = JsonSerializer.Deserialize<List<Team>>(json);
-                Teams = new ObservableCollection<Team>(teams);
+                var teams = JsonSerializer.Deserialize<List<Root>>(json);
+
+                List<Team2> teams2 = new List<Team2>();
+
+                foreach (var team in teams)
+                {
+                    Team2 newTeam = new Team2();
+                    newTeam.Rank = team.stats.rank;
+                    newTeam.Logo = team.team.logo;
+                    newTeam.Name = team.team.name;
+
+                    newTeam.GamesPlayed = team.stats.gamesPlayed;
+                    newTeam.Wins = team.stats.wins;
+                    newTeam.Ties = team.stats.ties;
+                    newTeam.Losses = team.stats.losses;
+                    newTeam.GoalsFor = team.stats.goalsFor;
+                    newTeam.GoalsAgainst = team.stats.goalsAgainst;
+                    newTeam.GoalDifference = team.stats.goalDifference;
+
+
+
+                    teams2.Add(newTeam);
+                }
+
+                Teams = new ObservableCollection<Team2>(teams2);
             }
         }
     }

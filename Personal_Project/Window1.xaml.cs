@@ -20,9 +20,9 @@ namespace Personal_Project
     public partial class Window1 : Window
     {
 
-        Team team; 
+        Team2 team; 
 
-        public Window1(Team team)
+        public Window1(Team2 team)
         {
             InitializeComponent();
             this.team = team;

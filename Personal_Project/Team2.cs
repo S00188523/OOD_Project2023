@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Personal_Project
 {
-    public class Team
+    public class Team2
     {
         public int Rank { get; set; }
         public string Name { get; set; }
-        public string GamesPlayed { get; set; }
+        public int GamesPlayed { get; set; }
         public int Wins { get; set; }
         public int Ties { get; set; }
         public int Losses { get; set; }

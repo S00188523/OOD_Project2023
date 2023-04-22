@@ -5,25 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personal_Project"
         mc:Ignorable="d"
-        Title="Premier League Table 2022/2023" Height="450" Width="800">
+        Title="Premier League Table 2022/2023" Height="450" Width="800"
+        Loaded="Window_Loaded">
     <Window.DataContext>
         <local:MainViewModel/>
     </Window.DataContext>
 
    <Window.Resources>
         <DataTemplate x:Key="teamTemplate">
-            <StackPanel Orientation="Horizontal" Margin="10">
-                <TextBlock Text="{Binding rank}" Margin="10"/>
-                <Image Source="{Binding logo}" Height="25"/>
-                <TextBlock Text="{Binding name}" FontWeight="Bold" Margin="10"/>
-                <TextBlock Text="{Binding gamesPlayed}" Margin="10" TextAlignment="Center" HorizontalAlignment="Center"/>
-                <TextBlock Text="{Binding wins}" Margin="10" TextAlignment="Center" HorizontalAlignment="Center"/>
-                <TextBlock Text="{Binding ties}" Margin="10" TextAlignment="Center" HorizontalAlignment="Center"/>
-                <TextBlock Text="{Binding losses}" Margin="10" TextAlignment="Center" HorizontalAlignment="Center"/>
-                <TextBlock Text="{Binding points}" Margin="10" TextAlignment="Center" HorizontalAlignment="Center"/>
-                <TextBlock Text="{Binding goalsFor}" Margin="10" TextAlignment="Center" HorizontalAlignment="Center"/>
-                <TextBlock Text="{Binding goalsAgainst}" Margin="10" TextAlignment="Center" HorizontalAlignment="Center"/>
-                <TextBlock Text="{Binding goalDifference}" Margin="10" TextAlignment="Center" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Margin="10" Width="Auto" HorizontalAlignment="Center">
+                <TextBlock Text="{Binding Rank}" FontWeight="Bold" FontSize="20" Margin="10" TextAlignment="Center" HorizontalAlignment="Center"/>
+                <Image Source="{Binding Logo}" Height="25"/>
+                <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="20" Margin="10"/>
+                <TextBlock Text="{Binding GamesPlayed}" FontSize="20" Margin="10" TextAlignment="Center"/>
+                <TextBlock Text="{Binding Wins}" FontSize="20" Margin="10" TextAlignment="Center" />
+                <TextBlock Text="{Binding Ties}" FontSize="20" Margin="10" TextAlignment="Center"/>
+                <TextBlock Text="{Binding Losses}" FontSize="20" Margin="10" TextAlignment="Center"/>
+                <TextBlock Text="{Binding Points}" FontWeight="Bold" FontSize="20" Margin="10" TextAlignment="Center"/>
+                <TextBlock Text="{Binding GoalsFor}" FontSize="20" Margin="10" TextAlignment="Center"/>
+                <TextBlock Text="{Binding GoalsAgainst}" FontSize="20" Margin="10" TextAlignment="Center" />
+                <TextBlock Text="{Binding GoalDifference}" FontSize="20" Margin="10" TextAlignment="Center"/>
             </StackPanel>
         </DataTemplate>
 </Window.Resources>
@@ -34,7 +35,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <!-- Add an Image control to the top row -->
-        <Image Grid.Row="0" Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSw71c3uRuJfoON2SStdN3uZ4DBKQNbLilcA&amp;usqp=CAU" Height="100" />
+        <Image Grid.Row="0" Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSw71c3uRuJfoON2SStdN3uZ4DBKQNbLilcA&amp;usqp=CAU" Height="67.5" />
         <ListBox x:Name="lbxTable" Grid.Row="2" ItemTemplate="{StaticResource teamTemplate}" ItemsSource="{Binding Teams}" SelectionChanged="lbxTable_SelectionChanged"/>
     </Grid>
 </Window>
