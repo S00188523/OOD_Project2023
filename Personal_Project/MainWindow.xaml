@@ -11,23 +11,33 @@
         <local:MainViewModel/>
     </Window.DataContext>
 
-   <Window.Resources>
+    <Window.Resources>
         <DataTemplate x:Key="teamTemplate">
-            <StackPanel Orientation="Horizontal" Margin="10" Width="Auto" HorizontalAlignment="Center">
-                <TextBlock Text="{Binding Rank}" FontWeight="Bold" FontSize="20" Margin="10" TextAlignment="Center" HorizontalAlignment="Center"/>
-                <Image Source="{Binding Logo}" Height="25"/>
-                <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="20" Margin="10"/>
-                <TextBlock Text="{Binding GamesPlayed}" FontSize="20" Margin="10" TextAlignment="Center"/>
-                <TextBlock Text="{Binding Wins}" FontSize="20" Margin="10" TextAlignment="Center" />
-                <TextBlock Text="{Binding Ties}" FontSize="20" Margin="10" TextAlignment="Center"/>
-                <TextBlock Text="{Binding Losses}" FontSize="20" Margin="10" TextAlignment="Center"/>
-                <TextBlock Text="{Binding Points}" FontWeight="Bold" FontSize="20" Margin="10" TextAlignment="Center"/>
-                <TextBlock Text="{Binding GoalsFor}" FontSize="20" Margin="10" TextAlignment="Center"/>
-                <TextBlock Text="{Binding GoalsAgainst}" FontSize="20" Margin="10" TextAlignment="Center" />
-                <TextBlock Text="{Binding GoalDifference}" FontSize="20" Margin="10" TextAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Margin="20" Width="Auto" HorizontalAlignment="Center">
+                <TextBlock Text="{Binding Rank}" FontWeight="Bold" FontSize="20" Margin="20" TextAlignment="Center" HorizontalAlignment="Center"/>
+                <Image Source="{Binding Logo}" Height="40"/>
+                <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="20" Margin="20"/>
+                <TextBlock Text="GP" FontWeight="Bold" TextDecorations="Underline" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="{Binding GamesPlayed}" FontSize="17.5" Margin="20, 20, 20, 20 " TextAlignment="Center" HorizontalAlignment="Right"/>
+                <TextBlock Text="W" FontWeight="Bold" TextDecorations="Underline" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="{Binding Wins}" FontSize="17.5" Margin="20, 20, 20, 20" TextAlignment="Center" HorizontalAlignment="Right"/>
+                <TextBlock Text="D" FontWeight="Bold" TextDecorations="Underline" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="{Binding Ties}" FontSize="17.5" Margin="20, 20, 20, 20" TextAlignment="Center" HorizontalAlignment="Right"/>
+                <TextBlock Text="L" FontWeight="Bold" TextDecorations="Underline" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="{Binding Losses}" FontSize="17.5" Margin="20, 20, 20, 20" TextAlignment="Center" HorizontalAlignment="Right"/>
+                <TextBlock Text="Pts" FontWeight="Bold" TextDecorations="Underline" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="{Binding Points}" FontWeight="Bold" FontSize="17.5" Margin="20, 20, 20, 20" TextAlignment="Center" HorizontalAlignment="Right"/>
+                <TextBlock Text="GF" FontWeight="Bold" TextDecorations="Underline" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="{Binding GoalsFor}" FontSize="17.5" Margin="20, 20, 20, 20" TextAlignment="Center" HorizontalAlignment="Right"/>
+                <TextBlock Text="GA" FontWeight="Bold" TextDecorations="Underline" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="{Binding GoalsAgainst}" FontSize="17.5" Margin="20, 20, 20, 20" TextAlignment="Center" HorizontalAlignment="Right"/>
+                <TextBlock Text="GD" FontWeight="Bold" TextDecorations="Underline" Margin="0,10,0,0"></TextBlock>
+                <TextBlock Text="{Binding GoalDifference}" FontSize="17.5" Margin="20, 20, 20, 20" TextAlignment="Center" HorizontalAlignment="Right"/>
+
             </StackPanel>
         </DataTemplate>
-</Window.Resources>
+    </Window.Resources>
+
 
     <Grid>
         <Grid.RowDefinitions>

@@ -37,7 +37,7 @@ namespace Personal_Project
                 RequestUri = new Uri("https://premier-league-standings1.p.rapidapi.com/"),
                 Headers =
                 {
-                    { "X-RapidAPI-Key", "d99ef4d195mshf7ef03579a02ac0p1916b4jsn5524649b62a4" },
+                    { "X-RapidAPI-Key", "404c9791c3mshd7d724bbe56a063p147323jsna60700f0d1a3" },
                     { "X-RapidAPI-Host", "premier-league-standings1.p.rapidapi.com" },
                 },
             };
@@ -63,6 +63,7 @@ namespace Personal_Project
                     newTeam.Wins = team.stats.wins;
                     newTeam.Ties = team.stats.ties;
                     newTeam.Losses = team.stats.losses;
+                    newTeam.Points = team.stats.points;
                     newTeam.GoalsFor = team.stats.goalsFor;
                     newTeam.GoalsAgainst = team.stats.goalsAgainst;
                     newTeam.GoalDifference = team.stats.goalDifference;

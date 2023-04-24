@@ -19,6 +19,7 @@ namespace Personal_Project
         public int GoalsFor { get; set; }
         public int GoalsAgainst { get; set; }
         public int GoalDifference { get; set; }
+        public string TeamInfo { get; set; }
 
     }
 
