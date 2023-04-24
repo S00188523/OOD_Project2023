@@ -137,31 +137,39 @@ namespace Personal_Project
                 else if (team.Name == "AFC Bournemouth")
                 {
                     tblkAdditionalInfo.Text = "AFC Bournemouth is a professional football club in Bournemouth, England, competing in the Premier League. They were formed in 1899 as Boscombe and changed their name to AFC Bournemouth in 1971. The club plays at Dean Court and wears red-and-black striped shirts. Bournemouth played in regional leagues before being elected into the Football League in 1923. They won several promotions and titles, including the Championship in 2014-15, and have been in the Premier League for five seasons. Bournemouth were relegated in 2020 but returned in 2022 under the management of Scott Parker.";
+                    StadiumImg.Source = new BitmapImage(new Uri("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSab2aBxqe5lVzPM_Cibk4hyME5UdXr4zfVjQ&usqp=CAU"));
+
                 }
 
                 else if (team.Name == "Leeds United")
                 {
                     tblkAdditionalInfo.Text = "Leeds United FC is a football club based in Leeds, England, competing in the Premier League and playing at Elland Road. They have won the League Championship three times, four Second Division titles, the FA Cup, EFL Cup, Charity Shield twice, and the Inter-Cities Fairs Cup twice. The team's most successful period was under Don Revie's management in the 1960s and 1970s, winning multiple titles. Leeds United has rivalries with Manchester United and Chelsea, and their kit features white shirts, shorts, and socks with the White Rose of York on their badge.";
+                    StadiumImg.Source = new BitmapImage(new Uri("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq0T8DwgIczV54ZA_suBGJ-OtQT4erEru-PA&usqp=CAU"));
+
                 }
 
                 else if (team.Name == "Leicester City")
                 {
                     tblkAdditionalInfo.Text = "Leicester City FC is a professional football club based in Leicester, England, and plays at King Power Stadium in the Premier League. Founded in 1884 as Leicester Fosse, the club moved to Filbert Street in 1891 and became known as Leicester City in 1919. Leicester won the Premier League in 2015-2016 and their highest league finish prior to that was second place in 1928-1929. They have won the FA Cup once in 2021 and the League Cup three times in 1964, 1997, and 2000. The club has played in seven European competitions and reached the UEFA Champions League quarter-finals in 2016-2017 and the UEFA Europa Conference League semi-finals in 2021-2022.";
+                    StadiumImg.Source = new BitmapImage(new Uri("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr5526YBmFV-Eypxe8JLWU6oQzUNMVACyHMw&usqp=CAU"));
                 }
 
                 else if (team.Name == "Everton")
                 {
                     tblkAdditionalInfo.Text = "Everton FC is a professional football club based in Liverpool, England, and competes in the Premier League. The club was a founding member of the Football League and has spent a record 119 seasons in the top division, missing only four seasons. Everton has won nine league titles, five FA Cups, one European Cup Winners' Cup, and nine Charity Shields. The club's supporters are known as \"Evertonians\" or \"Blues,\" and their main rivals are Liverpool, with whom they contest the Merseyside derby. Everton plays home matches at Goodison Park and wears royal blue shirts with white shorts and socks.";
+                    StadiumImg.Source = new BitmapImage(new Uri("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk8E9gTruWG3sZsBQ2iKIiSCMXuGLuRZDpsA&usqp=CAU"));
                 }
 
                 else if (team.Name == "Nottingham Forest")
                 {
                     tblkAdditionalInfo.Text = "Nottingham Forest FC is an English football club based in West Bridgford, Nottinghamshire, founded in 1865. The club plays at the City Ground and has won two European Cups, one UEFA Super Cup, one League title, two FA Cups, four League Cups, and one FA Charity Shield. The team's most successful period was under the management of Brian Clough and Peter Taylor in the late 1970s and early 1980s, which included back-to-back wins in the European Cup in 1979 and 1980. Forest's fiercest rivalry is with Derby County, with whom they contest the East Midlands derby.";
+                    StadiumImg.Source = new BitmapImage(new Uri("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgkI_1GRYMvBcQNv05XdoloOalcr9Sm98QrA&usqp=CAU"));
                 }
 
                 else if (team.Name == "Southampton")
                 {
                     tblkAdditionalInfo.Text = "Southampton FC is a Premier League football club based in Southampton, Hampshire. They play at St Mary's Stadium and wear red and white shirts. The club was founded in 1885 and has won the Southern League six times. They were promoted to the Football League Third Division in 1920 and reached the First Division in 1965. Southampton won the FA Cup in 1976 as a Second Division team and were runners-up in the League Cup in 1979 and the FA Cup in 2003. The club has a rivalry with Portsmouth and won promotion to the Premier League in 2012 after successive promotions from League One and the Championship.";
+                    StadiumImg.Source = new BitmapImage(new Uri("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkYyXaJe_SDkLDfWMlfjNH2FVMmOIYGTahXA&usqp=CAU"));
                 }
 
                 
